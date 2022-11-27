@@ -1,0 +1,81 @@
+/**********TABLET************/
+
+@media(max-width:1000px){
+    .container{
+        padding: 50px;
+    }
+    header{
+        padding: 10px 50px;
+    }
+    header .inscricao{
+        display: none;
+    }
+
+    footer .container .head .txtfooter a{
+        display: block;
+        margin: 7px 0;
+    }
+}
+
+@media (min-width:1000px) and (max-width:1400px){
+    footer .container .head .txtfooter a{
+        margin: 0px 15px;
+    }    
+}
+
+
+
+/************MOBILE*************/
+
+@media (max-width:700px){
+
+    /******HEADER********/    
+    header{
+        padding: 10px 15px;
+    }
+
+    .container{
+        padding: 30px;
+    }
+    header #menuHamburguer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header .menu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 70%;
+        width: 0;
+        overflow: hidden;
+        height: 100vh;
+        padding-top: 60px;
+        background-color: var(--color-quaternary);
+        transition: all 0.5s ease;
+    }
+
+    /*********FOOTER*********/
+    footer .container .head{
+        border: none;
+        padding: 0;
+    }
+
+    footer .container .head h2{
+        font-size: 1.8em;
+    }
+
+    footer .container .icon{
+        margin: 50px 20px;
+    }
+
+    footer .container .head .txtfooter{
+        display: none;
+    }
+
+    footer .container .txtFooterMobile{
+        display: flex;
+    }      
+}

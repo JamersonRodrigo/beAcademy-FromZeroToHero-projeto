@@ -1,0 +1,37 @@
+/**********LOGO***********/
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+ .logo h2{
+    color: var(--color-primary);
+}
+
+/********BUTTONS******/
+.button{
+    margin: 5px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonPrimary{
+    background-color: var(--color-primary);
+    color: var(--color-secundary);
+
+}
+
+.buttonSecundary{
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+
+/**********CONTAINER********/
+.container{
+    padding:100px;
+}

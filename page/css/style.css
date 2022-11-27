@@ -1,0 +1,15 @@
+
+/*******ALL PAGES********/
+@import url("components/classes.css");
+@import url("components/all.css");
+
+
+
+
+/**********RESPONSIVO*********/
+@import url("responsivo/responsiveall.css");
+
+
+
+/************PAGES************/
+@import url("pages/index.css");

@@ -1,0 +1,171 @@
+:root{
+    --color-primary: red;
+    --color-secundary:white ;
+    --color-tertiary:black;
+    --color-quaternary:rgba(0, 0, 0, 0.795);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+body{
+    background-color:var(--color-quaternary);
+    overflow-x: hidden;
+}
+
+
+
+/********HEADER*********/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    padding: 10px 100px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.541);
+    background-color: var(--color-tertiary);
+}
+
+
+header .menu a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--color-primary);
+    margin: 5px;
+    transition: .5s;
+}
+
+.ativado .menu {
+    width: 30%;
+}
+
+.ativado .menu a{
+    margin-top: 15px;
+
+}
+
+.inscricao{
+    display: flex;
+}
+
+.button{
+    margin: 5px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+#menuHamburguer{
+    display: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+#l1,#l2,#l3{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: .3s;
+}
+
+.ativado #l1{
+    position: absolute;
+    top: 30%;
+    rotate: 50deg;
+    background-color: var(--color-secundary);
+}
+
+.ativado #l2{
+    position: absolute;
+    top: 30%;
+    height: 0px;
+    transition: 0.15s;
+}
+
+.ativado #l3{
+    position: absolute;
+    top: 30%;
+    rotate: -50deg;
+    background-color: var(--color-secundary);
+}
+
+
+
+
+/************FOOTER********/
+footer{
+    text-align: center;
+    background-color: var(--color-tertiary);
+}
+
+footer .container .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+
+footer .container .head .txtfooter a{
+    margin: 0px 50px;
+    text-decoration: none;
+    color: gray;
+    font-weight: bolder;
+}
+
+footer .container .fbody{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .container .fbody .icones{
+    display: flex;
+}
+
+footer .container .icon{
+    margin: 100px 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: gray;
+}
+
+footer .container p{
+    margin-top: 40px;
+    color: rgb(58, 58, 58);
+}
+
+footer .container .txtFooterMobile{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .txtFooterMobile a{
+    margin: 25px 0px;
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+    font-weight: bolder;
+}
+
+footer .txtFooterMobile .line{
+    margin: 0 auto;
+    height: 2px;
+    width: 30px;
+    background-color: var(--color-primary);
+}
