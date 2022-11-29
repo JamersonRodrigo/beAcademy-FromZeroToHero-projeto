@@ -1,10 +1,36 @@
 @import url("../style.css");
 
+
+#btnscroll{
+    position: fixed;
+    bottom: 50px;
+    left: 40px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    cursor: pointer;
+    opacity: 0;
+    transition: .5s;
+    background-image: url("../../assets/iconscroll.png");
+    background-size: cover;
+    background-color: var(--color-secundary);
+    border: 1px solid var(--color-secundary);
+    animation: jumping 1.5s infinite linear;
+}
+
+@keyframes jumping {
+    0%{transform: translateY(-15px);}
+    50%{transform: translateY(0px);}
+    100%{transform: translateY(-15px);}
+}
+
+
 /**********SECTION 1***********/
 #section1{
     display: flex;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    margin-top: -80px;
     background-position: center;
     background-size: cover;
     transition: 1s;
@@ -108,7 +134,7 @@
     width: 150px;
     height: 70px;
     border-radius: 5px;
-    background-color: gray;
+    background-color: var(--color-quaternary);
 }
 
 

@@ -1,8 +1,8 @@
 :root{
-    --color-primary: red;
+    --color-primary: rgb(219, 29, 29);
     --color-secundary:white ;
-    --color-tertiary:black;
-    --color-quaternary:rgba(0, 0, 0, 0.795);
+    --color-tertiary:rgb(25, 25, 25);
+    --color-quaternary:rgb(100,100,100);
 }
 
 
@@ -21,6 +21,7 @@ body{
 
 
 
+
 /********HEADER*********/
 
 header{
@@ -29,8 +30,9 @@ header{
     justify-content: space-between;
     position: sticky;
     top: 0%;
+    height: 60px;
     padding: 10px 100px;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.541);
+    transition: .5s;
     background-color: var(--color-tertiary);
 }
 
@@ -123,8 +125,13 @@ footer .container .head{
 footer .container .head .txtfooter a{
     margin: 0px 50px;
     text-decoration: none;
-    color: gray;
+    color: var(--color-quaternary);
     font-weight: bolder;
+    transition: .5s;
+}
+
+footer .container .head .txtfooter a:hover{
+    color: var(--color-s);
 }
 
 footer .container .fbody{
@@ -142,12 +149,12 @@ footer .container .icon{
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    background-color: gray;
+    background-color: var(--color-quaternary);
 }
 
 footer .container p{
     margin-top: 40px;
-    color: rgb(58, 58, 58);
+    color: var(--color-quaternary);
 }
 
 footer .container .txtFooterMobile{
@@ -159,7 +166,7 @@ footer .container .txtFooterMobile{
 footer .txtFooterMobile a{
     margin: 25px 0px;
     text-decoration: none;
-    color: rgb(58, 58, 58);
+    color: var(--color-quaternary);
     font-weight: bolder;
 }
 

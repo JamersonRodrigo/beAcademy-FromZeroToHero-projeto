@@ -1,3 +1,17 @@
+
+function init(){
+    const header=document.getElementById("header")
+    window.addEventListener('scroll',()=>{
+        if(window.scrollY > 0){
+            menuMobile.style.backgroundColor="var(--color-tertiary)"
+        }else{
+            menuMobile.style.backgroundColor="transparent"
+        }
+    })
+}
+
+window.addEventListener('load',init)
+
 const slide={
 
     init:function(){
@@ -37,5 +51,26 @@ const slide={
     }
 
 }
-
 slide.init()
+
+
+const btnscroll={
+    activate:function(){
+    this.$btn=document.querySelector("#btnscroll")
+    this.$btn.addEventListener('click',()=>{
+        window.scroll({top:-window.innerHeight, behavior: "smooth"})
+    })
+    window.addEventListener('scroll',()=>{
+        if(window.scrollY > 0){
+            this.$btn.style.opacity="100"
+        }else{
+            this.$btn.style.opacity="0"
+        }
+    })
+    
+    }
+
+
+    
+}
+btnscroll.activate()

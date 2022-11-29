@@ -1,14 +1,15 @@
 /**********TABLET************/
 
 @media(max-width:1000px){
-    .container{
-        padding: 50px;
-    }
     header{
         padding: 10px 50px;
     }
     header .inscricao{
         display: none;
+    }
+
+    .container{
+        padding: 100px;
     }
 
     footer .container .head .txtfooter a{
@@ -32,6 +33,7 @@
     /******HEADER********/    
     header{
         padding: 10px 15px;
+        width: 92vw;
     }
 
     .container{
