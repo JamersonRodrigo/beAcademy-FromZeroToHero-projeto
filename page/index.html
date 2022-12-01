@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Teste</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/102/102418.png" type="image/x-icon">
 </head>
 <body>
 <!--*********HEADER**********-->
@@ -15,14 +16,20 @@
             <h2>logo2</h2>
         </div>
         <nav class="menu">
-            <a href="#">Features</a>
-            <a href="#">Princing</a>
-            <a href="#">Community</a>
-            <a href="#">Support</a>
+            <a href="#section2">Serviços</a>
+            <a href="#section3">Princing</a>
+            <a href="#section4">Community</a>
+            <a href="#section5">Support</a>
         </nav>
         <div class="inscricao">
             <button class="button buttonSecundary">LOG IN</button>
-            <button class="button buttonPrimary">REGISTER</button>
+            <button class="button buttonPrimary">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                REGISTER
+            </button>
         </div>
         <div id="menuHamburguer" onclick="ativaDesativa()">
             <span id="l1"></span>
@@ -37,7 +44,13 @@
     <section id="section1">
         <div class="tema">
             <h1 class="titulo">The largest community of photo enthusiasts</h1>
-            <button class="button buttonPrimary">Join Today</button>
+            <button class="button buttonPrimary">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Join Today
+            </button>
         </div>
     </section>
 
@@ -46,30 +59,57 @@
 <!--********SECTION 2***********-->
     <section id="section2">
         <div class="container">
-            <h1 class="titulo">Snap photos and share like never before</h1>
+            <h1 class="titulo">Conheça os nossos serviços</h1>
             <div class="wrapper">
                 <div class="wrapper1 artigo">
                     <div class="text">
-                        <h3>Sed  ut perspiciatis</h3>
+                        <h3>Desenvolvimento Web</h3>
+                        <img src="assets/iconpc.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque sapiente aut cupiditate error eos totam? Aperiam provident odit libero, debitis autem in molestiae, inventore quaerat deserunt harum, tenetur est! lo</p>
-                        <button class="button buttonPrimary">Learn more</button>
+                        <button class="button buttonPrimary">                    <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Saber mais
+                        </button>
                     </div>
                     <div class="text">
-                        <h3>Sed  ut perspiciatis</h3>
+                        <h3>Aplicativos Mobile</h3>
+                        <img src="assets/iconcell.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque sapiente aut cupiditate error eos totam? Aperiam provident odit libero, debitis autem in molestiae, inventore quaerat deserunt harum, tenetur est!</p>
-                        <button class="button buttonPrimary">Learn more</button>
+                        <button class="button buttonPrimary">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Saber mais
+                        </button>
                     </div>
                 </div>
                 <div class="wrapper2 artigo">
                     <div class="text">
-                        <h3>Sed  ut perspiciatis</h3>
+                        <h3>Análises de Crescimento</h3>
+                        <img src="assets/iconbook.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque sapiente aut cupiditate error eos totam? Aperiam provident odit libero, debitis autem in molestiae, inventore quaerat deserunt harum, tenetur est!</p>
-                        <button class="button buttonPrimary">Learn more</button>
+                        <button class="button buttonPrimary">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Saber mais
+                        </button>
                     </div>
                     <div class="text">
-                        <h3>Sed  ut perspiciatis</h3>
+                        <h3>Web Designe</h3>
+                        <img src="assets/icondesigne.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque sapiente aut cupiditate error eos totam? Aperiam provident odit libero, debitis autem in molestiae, inventore quaerat deserunt harum, tenetur est!</p>
-                        <button class="button buttonPrimary">Learn more</button>
+                        <button class="button buttonPrimary">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Saber mais
+                        </button>
                     </div>
                 </div>
                 
@@ -120,10 +160,28 @@
     <section id="section5">
         <div class="container">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tenetur magnam similique iure, aliquam sint magni officia impedit beatae error commodi debitis cupiditate, porro quaerat tempore excepturi sit obcaecati. Ipsa.</p>
-            <div class="inscricao">
-                <button class="button buttonSecundary">Log in</button>
-                <button class="button buttonPrimary">Register</button>
-            </div>
+            <form class="formulario">
+                <h3>Gostou ?
+                    <br>
+                    receba notificações e mensagens com dicas dos nossos melhores </h3>
+                <div id="login-box">
+                    <div class="user-box">
+                        <input type="text" name= ""required="">
+                        <label>E-mail</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name=""required="">
+                        <label>Celular</label>
+                    </div>
+                </div>
+                <button class="button buttonPrimary" id="btn-notifica">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    RECEBER NOTIFICAÇÕES
+                </button>
+            </form>
         </div>
     </section>
 

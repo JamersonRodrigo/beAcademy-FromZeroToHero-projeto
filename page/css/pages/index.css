@@ -25,6 +25,89 @@
 }
 
 
+
+/************HEADER*************/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+    top: 0%;
+    height: 60px;
+    transition: .5s;
+    background-color: var(--color-tertiary);
+}
+
+
+header .menu a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--color-primary);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.719);
+    margin: 5px;
+    transition: .5s;
+}
+
+.ativado .menu {
+    width: 30%;
+}
+
+.ativado .menu a{
+    margin-top: 15px;
+
+}
+
+.inscricao{
+    display: flex;
+}
+
+.button{
+    margin: 5px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+#menuHamburguer{
+    display: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+#l1,#l2,#l3{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: .3s;
+}
+
+.ativado #l1{
+    position: absolute;
+    top: 30%;
+    rotate: 50deg;
+    background-color: var(--color-secundary);
+}
+
+.ativado #l2{
+    position: absolute;
+    top: 30%;
+    height: 0px;
+    transition: 0.15s;
+}
+
+.ativado #l3{
+    position: absolute;
+    top: 30%;
+    rotate: -50deg;
+    background-color: var(--color-secundary);
+}
+
+
 /**********SECTION 1***********/
 #section1{
     display: flex;
@@ -44,6 +127,7 @@
 .titulo{
     font-weight: 100;
     font-size: 3em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.712);
 }
 
 
@@ -51,25 +135,29 @@
 /**********SECTION 2*********/
 #section2{
     background-color: var(--color-tertiary);
+
 }
 
 #section2 h1{
     margin-bottom: 50px;
+    text-align: center;
 }
 
 #section2 .wrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-#section2 .wrapper .artigo{
-    width: 45%;
-}
 
 #section2 .wrapper .artigo .text{
     padding: 40px 0px;
     line-height: 30px;
     font-size: 1.2em;
+    text-align: center;
+}
+
+#section2 .wrapper .artigo .text img{
+    width: 100px;
 }
 
 #section2 .wrapper .artigo h3,#section2 .wrapper .artigo p,#section2 .wrapper .artigo .button{
@@ -147,7 +235,132 @@
 }
 
 #section5 .container p{
-    width: 60%;
+    width: 50%;
     font-size: 1.2em;
     line-height: 30px;
+}
+
+#section5 .formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+#section5 .formulario h3{
+    margin-bottom: 25px;
+}
+
+#section5 .formulario #login-box{
+    height: 0;
+    width: 0;
+    border-bottom: 2px solid var(--color-primary);
+    overflow: hidden;
+    transition: .5s;
+}
+
+#section5 .formulario .user-box{
+    position: relative;
+}
+
+#section5 .formulario .user-box input{
+    width: 50%;
+    padding: 10px 0;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+#section5 .formulario .user-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#section5 .formulario .user-box input:focus~label,#section5 .formulario .user-box input:valid~label{
+    top: -20px;
+    left: 0px; 
+    color: #ff0043;
+    font-size: 12px;
+}
+
+#section5 .formulario .button{
+    width: 50%;
+}
+
+
+
+/************FOOTER********/
+footer{
+    text-align: center;
+    background-color: var(--color-tertiary);
+}
+
+footer .container .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+
+footer .container .head .txtfooter a{
+    text-decoration: none;
+    color: var(--color-quaternary);
+    font-weight: bolder;
+    transition: .5s;
+}
+
+footer .container .head .txtfooter a:hover{
+    color: var(--color-s);
+}
+
+footer .container .fbody{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .container .fbody .icones{
+    display: flex;
+}
+
+footer .container .icon{
+    margin: 100px 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: var(--color-quaternary);
+}
+
+footer .container p{
+    margin-top: 40px;
+    color: var(--color-quaternary);
+}
+
+footer .container .txtFooterMobile{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .txtFooterMobile a{
+    margin: 25px 0px;
+    text-decoration: none;
+    color: var(--color-quaternary);
+    font-weight: bolder;
+}
+
+footer .txtFooterMobile .line{
+    margin: 0 auto;
+    height: 2px;
+    width: 30px;
+    background-color: var(--color-primary);
 }

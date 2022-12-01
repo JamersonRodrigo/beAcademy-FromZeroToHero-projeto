@@ -1,8 +1,9 @@
 :root{
     --color-primary: rgb(219, 29, 29);
+    --color-primary-dark:rgb(145, 20, 20);
     --color-secundary:white ;
-    --color-tertiary:rgb(25, 25, 25);
-    --color-quaternary:rgb(100,100,100);
+    --color-tertiary:rgb(34, 33, 33);
+    --color-quaternary:rgb(145, 143, 143);
 }
 
 
@@ -14,6 +15,10 @@
     color: white;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color:var(--color-quaternary);
     overflow-x: hidden;
@@ -22,157 +27,131 @@ body{
 
 
 
-/********HEADER*********/
+/***********CLASSES*********/
 
-header{
+
+/********LOGO*********/
+.logo{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0%;
-    height: 60px;
-    padding: 10px 100px;
-    transition: .5s;
-    background-color: var(--color-tertiary);
 }
 
-
-header .menu a{
-    text-decoration: none;
-    font-weight: bolder;
+ .logo h2{
     color: var(--color-primary);
-    margin: 5px;
-    transition: .5s;
 }
 
-.ativado .menu {
-    width: 30%;
-}
-
-.ativado .menu a{
-    margin-top: 15px;
-
-}
-
-.inscricao{
-    display: flex;
-}
-
+/********BUTTONS******/
 .button{
-    margin: 5px;
     padding: 10px 40px;
     border-radius: 5px;
-    font-weight: bolder;
+    font-weight:bolder;
+    border: none;
     cursor: pointer;
 }
 
-
-#menuHamburguer{
-    display: none;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    position: relative;
-}
-
-#l1,#l2,#l3{
-    width: 100%;
-    height: 3px;
+.buttonPrimary{
     background-color: var(--color-primary);
-    transition: .3s;
-}
-
-.ativado #l1{
-    position: absolute;
-    top: 30%;
-    rotate: 50deg;
-    background-color: var(--color-secundary);
-}
-
-.ativado #l2{
-    position: absolute;
-    top: 30%;
-    height: 0px;
-    transition: 0.15s;
-}
-
-.ativado #l3{
-    position: absolute;
-    top: 30%;
-    rotate: -50deg;
-    background-color: var(--color-secundary);
-}
-
-
-
-
-/************FOOTER********/
-footer{
-    text-align: center;
-    background-color: var(--color-tertiary);
-}
-
-footer .container .head{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    padding: 20px 0px;
-    border-bottom: 2px solid var(--color-primary);
-}
-
-
-footer .container .head .txtfooter a{
-    margin: 0px 50px;
-    text-decoration: none;
-    color: var(--color-quaternary);
-    font-weight: bolder;
+    color: var(--color-secundary);
+    position: relative; 
+    overflow: hidden;
     transition: .5s;
+
 }
 
-footer .container .head .txtfooter a:hover{
-    color: var(--color-s);
+.buttonPrimary:hover{
+    background-color: var(--color-primary-dark);
 }
 
-footer .container .fbody{
-    display: flex;
-    justify-content: center;
+.buttonPrimary span{
+    position: absolute;
+    display: block;
+}
+
+.buttonPrimary span:nth-child(1){
+    top: 0;
+    left: -100%;
     width: 100%;
-}
-
-footer .container .fbody .icones{
-    display: flex;
-}
-
-footer .container .icon{
-    margin: 100px 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: var(--color-quaternary);
-}
-
-footer .container p{
-    margin-top: 40px;
-    color: var(--color-quaternary);
-}
-
-footer .container .txtFooterMobile{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-}
-
-footer .txtFooterMobile a{
-    margin: 25px 0px;
-    text-decoration: none;
-    color: var(--color-quaternary);
-    font-weight: bolder;
-}
-
-footer .txtFooterMobile .line{
-    margin: 0 auto;
     height: 2px;
-    width: 30px;
-    background-color: var(--color-primary);
+    background: linear-gradient(90deg, transparent, var(--color-primary));
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.buttonPrimary span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,var(--color-primary));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+
+@keyframes btn-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%, 100%{
+        top: 100%;
+    }
+    
+}
+
+.buttonPrimary span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--color-primary));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+
+@keyframes btn-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+    
+}
+
+.buttonPrimary span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent,var(--color-primary));
+    animation: bnt-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+
+@keyframes bnt-anim4 {
+    0%{
+        bottom: -100%;
+    }
+    50%, 100%{
+        bottom: 100%;
+    }  
+}
+
+.buttonSecundary{
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+
+/**********CONTAINER********/
+.container{
+    padding:100px 100px;
 }

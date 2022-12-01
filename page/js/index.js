@@ -1,5 +1,20 @@
 
-function init(){
+let menuMobile = document.getElementById("header")
+let aberto=false
+
+function ativaDesativa(){
+    if (aberto ===true){
+        menuMobile.classList.remove("ativado")
+        aberto=false
+    }else if(aberto===false){
+        menuMobile.classList.add("ativado")
+        aberto=true
+    }
+}
+
+
+
+function start(){
     const header=document.getElementById("header")
     window.addEventListener('scroll',()=>{
         if(window.scrollY > 0){
@@ -10,7 +25,9 @@ function init(){
     })
 }
 
-window.addEventListener('load',init)
+window.addEventListener('load',start)
+
+
 
 const slide={
 
@@ -30,10 +47,10 @@ const slide={
     },
 
     preCarregamento:function(){
-        var s=1;
-        for(var i=0;i<3;i++){
+        let s=1;
+        for(let i=0;i<4;i++){
             this.imgs[i]=new Image()
-            this.imgs[i].src="../assets/slide"+s+".jpg"
+            this.imgs[i].src="./assets/slide"+s+".jpg"
             s++;
         }
     },
@@ -56,21 +73,41 @@ slide.init()
 
 const btnscroll={
     activate:function(){
-    this.$btn=document.querySelector("#btnscroll")
-    this.$btn.addEventListener('click',()=>{
-        window.scroll({top:-window.innerHeight, behavior: "smooth"})
-    })
-    window.addEventListener('scroll',()=>{
-        if(window.scrollY > 0){
-            this.$btn.style.opacity="100"
-        }else{
-            this.$btn.style.opacity="0"
-        }
-    })
-    
+        this.$btn=document.querySelector("#btnscroll")
+        this.$btn.addEventListener('click',()=>{
+            window.scroll({top:-window.innerHeight, behavior: "smooth"})
+        })
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY > 0){
+                this.$btn.style.opacity="100"
+            }else{
+                this.$btn.style.opacity="0"
+            }
+        })
     }
-
-
-    
 }
 btnscroll.activate()
+
+
+
+
+const $button=document.getElementById("btn-notifica")
+
+
+$button.addEventListener("click",()=>{
+    const $form=document.getElementById('login-box')
+    $form.style.width="100%"
+    setTimeout(height,500)
+
+    function height(){
+    $form.style.height="150px"
+    $form.style.padding="10px"
+    setTimeout(()=>{
+        $form.style.borderBottom="none"
+        $button.innerHTML="COMFIRMAR!"
+    },400)
+    }
+    
+})
+
+

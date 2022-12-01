@@ -1,13 +1,12 @@
 
 /*******ALL PAGES********/
-@import url("components/classes.css");
 @import url("components/all.css");
 
 
 
-
 /**********RESPONSIVO*********/
-@import url("responsivo/responsiveall.css");
+@import url("responsivo/responsivoindex.css");
+@import url("responsivo/responsivo.css");
 
 
 

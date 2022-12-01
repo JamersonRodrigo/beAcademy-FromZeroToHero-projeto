@@ -1,0 +1,35 @@
+
+/*************WEB************/
+@media(min-width:780px){
+    #section2 .wrapper .artigo{
+        width: 30%;
+    }
+}
+
+/**********TABLET**********/
+@media (max-width:780px){
+    #section2 .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    #section2 .wrapper .artigo{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #section5 .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
+/***********MOBILE**********/
+@media(max-width:650px){
+    #btnscroll{
+        display: none;
+    }
+}
