@@ -14,7 +14,7 @@ function ativaDesativa(){
 
 
 
-function start(){
+function header(){
     const header=document.getElementById("header")
     window.addEventListener('scroll',()=>{
         if(window.scrollY > 0){
@@ -25,7 +25,7 @@ function start(){
     })
 }
 
-window.addEventListener('load',start)
+window.addEventListener('load',header)
 
 
 
@@ -63,8 +63,8 @@ const slide={
 
     },
 
-    carregaImg:function(img){
-        this.$slide.style.backgroundImage="url('"+this.imgs[img].src+"')"
+    carregaImg:function(n){
+        this.$slide.style.backgroundImage="url('"+this.imgs[n].src+"')"
     }
 
 }
@@ -100,7 +100,7 @@ $button.addEventListener("click",()=>{
     setTimeout(height,500)
 
     function height(){
-    $form.style.height="150px"
+    $form.style.height="300px"
     $form.style.padding="10px"
     setTimeout(()=>{
         $form.style.borderBottom="none"

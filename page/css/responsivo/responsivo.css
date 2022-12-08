@@ -1,3 +1,12 @@
+/******CONTAINER******/
+@media(max-width:650px){
+    .container{
+        padding: 75px 50px;
+    }
+}
+
+
+
 /*********HEADER*********/
 
 /*WEB*/
@@ -29,8 +38,6 @@
     }
     header .menu{
         position: absolute;
-        display: flex;
-        flex-direction: column;
         top: 0;
         left: 70%;
         width: 0;
@@ -40,54 +47,75 @@
         background-color: var(--color-tertiary);
         transition: all 0.5s ease;
     }
+    header .menu ul{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
+/***********SECTION 4***********/
+/**********WEB********/
+@media(min-width:800px){
+    #section4 .wrapper .artigo{
+        width: 40%;
+    }
+}
+
+/**********TABLET**********/
+@media (max-width:800px){
+    #section4 .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    #section4 .wrapper .artigo{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/********* SECTION 5************/
+/**********TABLET**********/
+@media (max-width:1000px){
+
+    #section5 .container{
+        display: flex;
+        flex-direction: column;
+    }
+    #section5 .container .formulario{
+        width: 100%;
+    }
+    
+}
 
 
 /**********FOOTER************/
-/*WEB*/
-@media(min-width:1420px){
-    footer .container .head .txtfooter a{
-        margin: 0px 50px;
-    }
-}
-
-@media(max-width:1420px){
-    footer .container .head .txtfooter a{
-        margin: 0px 25px;
-    }
-}
-
-/*TABLET*/
-
-@media(max-width:1110px){
-    footer .container .head .txtfooter a{
-        display: block;
-    }
-}
 
 /*MOBILE*/
 
-@media (max-width:650px){
-    footer .container .head{
-        border: none;
-        padding: 0;
-    }
-
-    footer .container .head h2{
-        font-size: 1.8em;
-    }
-
-    footer .container .icon{
-        margin: 50px 20px;
-    }
-
-    footer .container .head .txtfooter{
-        display: none;
-    }
-
-    footer .container .txtFooterMobile{
+@media (max-width:750px){
+    footer .container .links{
         display: flex;
-    }   
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container .links a{
+        padding: 20px;
+    }
+
+
+    footer .container .links span{
+        margin-bottom: 10px;
+        width: 30px;
+        height: 2px;
+        background-color: var(--color-primary);
+    }
+}
+@media(max-width:650px){
+    footer{
+        padding: 50px;
+    }
 }

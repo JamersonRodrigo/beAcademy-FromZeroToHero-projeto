@@ -25,9 +25,14 @@ body{
 }
 
 
-
+a{
+    text-decoration: none;
+}
 
 /***********CLASSES*********/
+
+
+
 
 
 /********LOGO*********/
@@ -45,6 +50,7 @@ body{
     padding: 10px 40px;
     border-radius: 5px;
     font-weight:bolder;
+    text-decoration: none;
     border: none;
     cursor: pointer;
 }
