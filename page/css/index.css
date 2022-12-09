@@ -11,7 +11,7 @@
     cursor: pointer;
     opacity: 0;
     transition: .5s;
-    background-image: url("../../assets/iconscroll.png");
+    background-image: url("../assets/iconscroll.png");
     background-size: cover;
     background-color: var(--color-secundary);
     border: 1px solid var(--color-secundary);
@@ -157,10 +157,18 @@ header .menu ul li{
 }
 
 
+
+/************SECTION 3*************/
+#section3{
+    background-image: url("https://blconsultoriadigital.com.br/wp-content/uploads/2020/07/Imagem-Site-68.png");
+    background-size: cover;
+
+}
 #section3 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(12, 6, 6, 0.767);
 }
 
 #section3 .container .boxes{
@@ -168,40 +176,138 @@ header .menu ul li{
 }
 
 #section3 .container .boxes .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     text-align: center;
+    overflow: hidden;
     margin: 20px;
     max-width: 280px;
     height: 150px;
-    border-radius: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.438);
-    background-color: var(--color-primary);
     cursor: pointer;
     transition: .5s;
 }
 
-#section3 .container .boxes .box:hover{
-    background-color: var(--color-primary-dark);
+#section3 .container .boxes .box span{
+    position: absolute;
+    display: block;
+}
+
+.box span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--color-primary);
+    animation: box-anim1 5s linear infinite;
+}
+
+@keyframes box-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.box span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--color-primary);
+    animation: btn-anim2 5s linear infinite;
+}
+
+@keyframes box-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%, 100%{
+        top: 100%;
+    }
+    
+}
+
+.box span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--color-primary);
+    animation: box-anim3 5s linear infinite;
+}
+
+@keyframes box-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+    
+}
+
+.box span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--color-primary);
+    animation: box-anim4 5s linear infinite;
+}
+
+@keyframes box-anim4 {
+    0%{
+        bottom: -100%;
+    }
+    50%, 100%{
+        bottom: 100%;
+    }  
+}
+
+#section3 .container .boxes .box .mini-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--color-primary);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.486);
+}
+
+.mini-box h3{
+    color: var(--color-primary-dark);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
 }
 
 #section3 .container table{
-    min-width: 700px;
+    min-width: 900px;
     border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
 }
 
 #section3 .container table thead{
-    background-color: var(--color-tertiary);
+    background-color: rgba(0, 0, 0, 0.555);
 }
 
 #section3 .container table td,
 #section3 .container table th{
-    padding: 5px;
+    padding: 10px;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.384);
 }
+
+
+
 
 
 
@@ -241,21 +347,23 @@ header .menu ul li{
 /**********SECTION 5**********/
 #section5 .container{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
 }
 
 #section5 .container p{
     font-size: 1.2em;
     line-height: 30px;
-    max-width: 600px;
-    margin-bottom: 50px;
+    margin: 50px;
 
 }
 
 #section5 .formulario{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #section5 .formulario h3{
@@ -263,6 +371,8 @@ header .menu ul li{
 }
 
 #section5 .formulario #login-box{
+    display: flex;
+    justify-content: space-between;
     height: 0;
     width: 0;
     border-bottom: 2px solid var(--color-primary);
@@ -272,10 +382,14 @@ header .menu ul li{
 
 #section5 .formulario .user-box{
     position: relative;
+    width: 20%;
+    height: 20%;
 }
 
 #section5 .formulario .user-box input{
-    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 10px 0;
     color: #fff;
     margin-bottom: 30px;
@@ -288,7 +402,7 @@ header .menu ul li{
 #section5 .formulario .user-box label{
     position: absolute;
     top: 0;
-    left: 0;
+    left:0;
     padding: 10px 0;
     color: #fff;
     pointer-events: none;
@@ -303,7 +417,7 @@ header .menu ul li{
 }
 
 #section5 .formulario .button{
-    width: 50%;
+    width: 200px;
 }
 
 

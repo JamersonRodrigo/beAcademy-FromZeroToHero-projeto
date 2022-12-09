@@ -86,9 +86,23 @@
     }
     #section5 .container .formulario{
         width: 100%;
+        height:500px;
+        
     }
-    
+
+    #section5 .formulario #login-box{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #section5 .formulario .user-box input{
+        width: 100%;
+    }
+
 }
+
+
 
 
 /**********FOOTER************/

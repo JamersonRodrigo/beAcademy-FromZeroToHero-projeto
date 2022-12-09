@@ -1,13 +1,13 @@
 
-let menuMobile = document.getElementById("header")
+let $menuMobile = document.getElementById("header")
 let aberto=false
 
 function ativaDesativa(){
     if (aberto ===true){
-        menuMobile.classList.remove("ativado")
+        $menuMobile.classList.remove("ativado")
         aberto=false
     }else if(aberto===false){
-        menuMobile.classList.add("ativado")
+        $menuMobile.classList.add("ativado")
         aberto=true
     }
 }
@@ -18,9 +18,11 @@ function header(){
     const header=document.getElementById("header")
     window.addEventListener('scroll',()=>{
         if(window.scrollY > 0){
-            menuMobile.style.backgroundColor="var(--color-tertiary)"
+            $menuMobile.style.backgroundColor="var(--color-tertiary)"
+            $menuMobile.style.boxShadow="3px 3px 5px rgba(0, 0, 0, 0.473)"
         }else{
-            menuMobile.style.backgroundColor="transparent"
+            $menuMobile.style.backgroundColor="transparent"
+            $menuMobile.style.boxShadow="none"
         }
     })
 }
@@ -100,8 +102,8 @@ $button.addEventListener("click",()=>{
     setTimeout(height,500)
 
     function height(){
-    $form.style.height="300px"
-    $form.style.padding="10px"
+    $form.style.height="100%"
+    $form.style.padding="50px"
     setTimeout(()=>{
         $form.style.borderBottom="none"
         $button.innerHTML="COMFIRMAR!"
