@@ -5,6 +5,12 @@
     }
 }
 
+/***********MOBILE**********/
+@media(max-width:650px){
+    #btnscroll{
+        display: none;
+    }
+}
 
 
 /*********HEADER*********/
@@ -77,6 +83,7 @@
 
 
 /********* SECTION 5************/
+
 /**********TABLET**********/
 @media (max-width:1000px){
 
@@ -84,22 +91,18 @@
         display: flex;
         flex-direction: column;
     }
-    #section5 .container .formulario{
-        width: 100%;
-        height:500px;
-        
-    }
 
+}
+
+@media (max-width:1000px){
     #section5 .formulario #login-box{
         display:flex;
         flex-direction: column;
         justify-content: space-between;
     }
-
     #section5 .formulario .user-box input{
-        width: 100%;
+        width: 250%;
     }
-
 }
 
 
