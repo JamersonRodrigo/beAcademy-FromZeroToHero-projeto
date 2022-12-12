@@ -37,7 +37,12 @@ header {
   top: 0%;
   height: 60px;
   transition: 0.5s;
-  background-color: transparent;
+  background-color: var(--color-tertiary);
+}
+
+.logo{
+  display: flex;
+  align-items: flex-end;
 }
 
 header .menu ul {
@@ -165,21 +170,19 @@ header .menu ul li a{
   background-size: cover;
 }
 #section3 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color:var(--background-dark);
 }
 
 #section3 .container .boxes {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #section3 .container .boxes .box {
   position: relative;
   text-align: center;
   overflow: hidden;
-  margin: 20px;
+  margin: 40px auto;
   max-width: 280px;
   height: 150px;
   padding: 10px;
@@ -288,13 +291,17 @@ header .menu ul li a{
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
 }
 
+#section3 .container .table{
+  overflow-x:auto;
+}
+
 #section3 .container table {
-  min-width: 900px;
   border-collapse: collapse;
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
+  margin: auto;
 }
 
 #section3 .container table thead {
@@ -303,7 +310,7 @@ header .menu ul li a{
 
 #section3 .container table td,
 #section3 .container table th {
-  padding: 10px;
+  padding: 10px 100px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.384);
 }
@@ -318,12 +325,16 @@ header .menu ul li a{
   text-align: center;
 }
 
-#section4 .wrapper {
+
+#section4 .wrapper .artigo{
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #section4 .wrapper .artigo .text {
+  width: 400px;
   padding: 40px 0px;
   line-height: 30px;
   font-size: 1.2em;
@@ -383,11 +394,15 @@ header .menu ul li a{
   transition: 0.5s;
 }
 
+
+
 #section5 .formulario .user-box {
   position: relative;
   width: 20%;
   height: 20%;
 }
+
+
 
 #section5 .formulario .user-box input {
   position: absolute;
@@ -395,33 +410,71 @@ header .menu ul li a{
   left: 0;
   padding: 10px 0;
   color: #fff;
-  margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.384);
   outline: none;
   background: transparent;
 }
+
+#section5 .formulario .user-box .error{
+  border-bottom: 1px solid var(--color-primary);
+  transition: .5s;
+  animation: inputerror 1s infinite linear;
+}
+
+
 
 #section5 .formulario .user-box label {
   position: absolute;
   top: 0;
   left: 0;
   padding: 10px 0;
-  color: #fff;
+  color: white;
   pointer-events: none;
   transition: 0.5s;
 }
 
 #section5 .formulario .user-box input:focus ~ label,
 #section5 .formulario .user-box input:valid ~ label {
-  top: -20px;
+  top: -25px;
   left: 0px;
   color: #ff0043;
   font-size: 12px;
 }
 
+#section5 .formulario .msg{
+  padding-top: 20px;
+  color: var(--color-primary);
+}
+
+#section5 .formulario .map{
+  display: flex;
+  justify-content: space-between;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.384);
+  border-bottom: 2px solid var(--color-primary);
+  transition: .5s;
+}
+
+#section5 .formulario .map div{
+  width: 30%;
+  padding: 10px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+#section5 .formulario .map .logradouro,#section5 .formulario .map .bairro{
+  border-right: 1px solid rgba(255, 255, 255, 0.384);
+}
+
 #section5 .formulario .button {
   padding: 10px 40px;
+  margin: 20px;
 }
 
 /************FOOTER********/
@@ -450,6 +503,10 @@ footer .container .links a {
   color: var(--color-quaternary);
   font-weight: bolder;
   transition: 0.1s;
+}
+
+footer .container .links a img{
+  width: 30px;
 }
 
 footer .container .links a:hover {

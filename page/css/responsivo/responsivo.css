@@ -5,7 +5,7 @@
     }
 }
 
-/***********MOBILE**********/
+/***********SCROLL**********/
 @media(max-width:650px){
     #btnscroll{
         display: none;
@@ -14,7 +14,6 @@
 
 
 /*********HEADER*********/
-
 /*WEB*/
 @media(min-width:1000px){
     header{
@@ -60,39 +59,10 @@
 }
 
 
-/***********SECTION 4***********/
-/**********WEB********/
-@media(min-width:800px){
-    #section4 .wrapper .artigo{
-        width: 40%;
-    }
-}
-
-/**********TABLET**********/
-@media (max-width:800px){
-    #section4 .wrapper{
-        flex-direction: column;
-        align-items: center;
-    }
-    #section4 .wrapper .artigo{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 
 /********* SECTION 5************/
+/****TABLET****/
 
-/**********TABLET**********/
-@media (max-width:1000px){
-
-    #section5 .container{
-        display: flex;
-        flex-direction: column;
-    }
-
-}
 
 @media (max-width:1000px){
     #section5 .formulario #login-box{
@@ -100,7 +70,7 @@
         flex-direction: column;
         justify-content: space-between;
     }
-    #section5 .formulario .user-box input{
+    #section5 .formulario .user-box input, #section5 .formulario .user-box .msg {
         width: 250%;
     }
 }
@@ -109,9 +79,7 @@
 
 
 /**********FOOTER************/
-
 /*MOBILE*/
-
 @media (max-width:750px){
     footer .container .links{
         display: flex;

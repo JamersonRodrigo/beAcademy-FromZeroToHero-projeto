@@ -153,8 +153,11 @@ a{
 
 .buttonSecundary{
     background-color: transparent;
-    color: var(--color-primary);
     border: 2px solid var(--color-primary);
+}
+
+.buttonSecundary a{
+    color: var(--color-primary);
 }
 
 

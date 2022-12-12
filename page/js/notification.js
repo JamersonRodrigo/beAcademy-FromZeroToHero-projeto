@@ -1,9 +1,9 @@
- export function notification(){
+export function notification(){
  
- const $button = document.getElementById("btn-notifica");
+const $button = document.querySelector("#btn-notifica");
 
- $button.addEventListener("click", () => {
-  const $inputs = document.getElementById("login-box");
+$button.addEventListener("click", () => {
+  const $inputs = document.querySelector("#login-box");
   const $form = document.querySelector(".formulario")
   $inputs.style.width = "100%";
   setTimeout(height, 500);
@@ -12,7 +12,7 @@
     $inputs.style.height = "100%";
     $inputs.style.padding = "50px";
     if(window.innerWidth<1000){
-    $form.style.height = "500px";
+    $form.style.height = "600px";
     }
     setTimeout(() => {
       $inputs.style.borderBottom = "none";
@@ -22,10 +22,13 @@
         <span></span>
         <span></span>
         <span></span>
-        CONFIRMAR!
+        VERIFICAR!
       `;
+  $button.classList.add('accepted')
     }, 400);
-  }
 
+  }
+  $button.removeEventListener('click')
 });
+
 }

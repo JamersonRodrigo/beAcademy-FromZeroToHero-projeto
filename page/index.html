@@ -16,8 +16,8 @@
     <!--*********HEADER**********-->
     <header id="header">
       <div class="logo">
-        <h1>Logo</h1>
-        <h2>logo2</h2>
+        <h1>Be</h1>
+        <h2>Academy</h2>
       </div>
       <nav class="menu">
         <ul>
@@ -28,7 +28,7 @@
         </ul>
       </nav>
       <div class="inscricao">
-        <button class="button buttonSecundary">CONHECER</button>
+        <button class="button buttonSecundary"><a href="#section4">CONHECER</a></button>
         <button class="button buttonPrimary">
           <a href="#section5">
             <span></span>
@@ -116,42 +116,44 @@
             </div>
           </div>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>tema1</th>
-              <th>tma2</th>
-              <th>tema3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>conteudo1</td>
-              <td>conteudo2</td>
-              <td>conteudo3</td>
-            </tr>
-            <tr>
-              <td>conteudo1</td>
-              <td>conteudo2</td>
-              <td>conteudo3</td>
-            </tr>
-            <tr>
-              <td>conteudo1</td>
-              <td>conteudo2</td>
-              <td>conteudo3</td>
-            </tr>
-            <tr>
-              <td>conteudo1</td>
-              <td>conteudo2</td>
-              <td>conteudo3</td>
-            </tr>
-            <tr>
-              <td>conteudo1</td>
-              <td>conteudo2</td>
-              <td>conteudo3</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>tema1</th>
+                <th>tma2</th>
+                <th>tema3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>conteudo1</td>
+                <td>conteudo2</td>
+                <td>conteudo3</td>
+              </tr>
+              <tr>
+                <td>conteudo1</td>
+                <td>conteudo2</td>
+                <td>conteudo3</td>
+              </tr>
+              <tr>
+                <td>conteudo1</td>
+                <td>conteudo2</td>
+                <td>conteudo3</td>
+              </tr>
+              <tr>
+                <td>conteudo1</td>
+                <td>conteudo2</td>
+                <td>conteudo3</td>
+              </tr>
+              <tr>
+                <td>conteudo1</td>
+                <td>conteudo2</td>
+                <td>conteudo3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -165,9 +167,7 @@
               <h3>Desenvolvimento Web</h3>
               <img src="assets/iconpc.png" alt="" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque sapiente
-                aut cupiditate error eos totam? Aperiam provident odit libero, debitis autem in
-                molestiae, inventore quaerat deserunt harum, tenetur est! lo
+                Criamos sistemas para melhorar o gerenciamento de sua empresa e integrar diversos setores de forma automatizada. Tudo isso utilizando as últimas tecnologias disponíveis no mercado.
               </p>
               <button class="button buttonPrimary">
                 <a href="#section5">
@@ -183,9 +183,7 @@
               <h3>Aplicativos Mobile</h3>
               <img src="assets/iconcell.png" alt="" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque sapiente
-                aut cupiditate error eos totam? Aperiam provident odit libero, debitis autem in
-                molestiae, inventore quaerat deserunt harum, tenetur est!
+                Desenvolvemos soluções para as plataformas IOS e Android, permitindo que seus usuários alcancem soluções com a palma das mãos sem nenhuma dificuldade.
               </p>
               <button class="button buttonPrimary">
                 <a href="#section5">
@@ -203,9 +201,7 @@
               <h3>Análises de Crescimento</h3>
               <img src="assets/iconbook.png" alt="" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque sapiente
-                aut cupiditate error eos totam? Aperiam provident odit libero, debitis autem in
-                molestiae, inventore quaerat deserunt harum, tenetur est!
+                Auxiliamos empresas de diversos segmentos a alcançar resultados de alto impacto através de análises e pesquisa de acordo com a região.
               </p>
               <button class="button buttonPrimary">
                 <a href="#section5">
@@ -221,9 +217,7 @@
               <h3>Web Designe</h3>
               <img src="assets/icondesigne.png" alt="" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque sapiente
-                aut cupiditate error eos totam? Aperiam provident odit libero, debitis autem in
-                molestiae, inventore quaerat deserunt harum, tenetur est!
+                Projetamos softwares centrados nos usuários, utilizando as melhores práticas de design para proporcionar uma experiência agradável e descomplicada.
               </p>
               <button class="button buttonPrimary">
                 <a href="#section5">
@@ -259,23 +253,30 @@
           </h3>
           <div id="login-box">
             <div class="user-box">
-              <input type="text" name="" required="" />
-              <label>E-mail</label>
+              <input type="text" name="" required="" class="user"/>
+              <label>Usuario:</label>
+            </div>
+
+            <div class="user-box">
+              <input type="text" name="" required="" class="cell"/>
+              <label>Celular + DDD:</label>
             </div>
             <div class="user-box">
-              <input type="number" name="" required="" />
-              <label>Celular</label>
+              <input type="text" name="" required="" class="email"/>
+              <label>E-mail:</label>
             </div>
             <div class="user-box">
-              <input type="text" name="" required="" />
-              <label>E-mail</label>
-            </div>
-            <div class="user-box">
-              <input type="text" name="" required="" />
-              <label>E-mail</label>
+              <input type="text" name="" required="" class="cep"/>
+              <label>CEP:</label>
             </div>
           </div>
-          <div id="res"></div>
+          <div class="msg"></div>
+          <div class="map">
+            <div class="logradouro"></div>
+            <div class="bairro"></div>
+            <div class="localidade-uf"></div>
+
+          </div>
           <button class="button buttonPrimary" id="btn-notifica">
             <span></span>
             <span></span>
@@ -296,15 +297,11 @@
           <img src="assets/tw2icon.png" alt="" />
         </div>
         <div class="links">
-          <a href="">Home</a>
+          <a href=""><img src="assets/iconemail.png" alt=""> beacademy@gmail.com.br</a>
           <span></span>
-          <a href="">Services</a>
+          <a href=""><img src="assets/iconphone.png" alt=""> (82) 98753-7931</a>
           <span></span>
-          <a href="">About</a>
-          <span></span>
-          <a href="">Terms</a>
-          <span></span>
-          <a href="">Privacy Pocky</a>
+          <a href=""><img src="assets/localicon.png" alt=""> Maceio-AL</a>
           <span></span>
         </div>
         <p>@ Photo, inc.2022 We love our users!</p>
