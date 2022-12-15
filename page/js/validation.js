@@ -85,5 +85,6 @@ function setError(input){
 
 function removeError(input){
   input.classList.remove('error')
+  $msg.innerHTML=" "
 }
 
